@@ -120,7 +120,7 @@ head(dailysteps)
 ggplot(data=dailysteps,mapping=aes(x=steps)) + geom_histogram(binwidth=700)
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 - **Calculate and report the mean and median of the total number of steps taken per day**
 
@@ -162,7 +162,7 @@ The results are plotted in a line graph using ggplot, with each interval on the 
 ggplot(data=meanStepsByInterval,mapping=aes(x=interval,y=steps)) + geom_line() + labs(x="Intervals (in 5 mins)", y="Mean number of steps", title="Time Series Plot of Average Steps Taken per Interval")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 - **Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?**
 
@@ -281,7 +281,7 @@ steps2median <- format(median(dailysteps2$steps), scientific=FALSE)
 ggplot(data=dailysteps2,mapping=aes(x=steps)) + geom_histogram(binwidth=700)
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 The new mean is 10766.19 and the new median is 10766.19.
 
@@ -341,6 +341,6 @@ tail(meanSteps3ByInterval)
 ggplot(data=meanSteps3ByInterval,mapping=aes(x=interval,y=steps)) + geom_line() + facet_grid(rows = vars(daytype)) + labs(x="Intervals (in 5 mins)", y="Mean number of steps", title="Time Series Plot of Average Steps Taken per Interval")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 There is a noticeable less pronounced peak around the 0900 interval in the weekend plot, with its rise from the  0500 mark also less steep than the weekday plot.
